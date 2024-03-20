@@ -1,12 +1,21 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
+import AppComponent from "./components/AppComponent.vue";
+import AppHeader from "./components/AppHeader.vue";
+import SectionPost from "./components/SectionPost.vue";
+import SectionStories from "./components/SectionStories.vue";
+import SectionUser from "./components/SectionUser.vue";
+
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		AppComponent,
+		AppHeader,
+		SectionStories,
+		SectionPost,
+		SectionUser
 	},
 	data() {
 		return {
@@ -32,6 +41,10 @@ export default {
 
 <template>
 	<main>
+		<AppHeader />
+		<SectionStories />
+		<SectionPost />
+		<SectionUser />
 		<AppComponent />
 
 		<button class="btn btn-primary">
