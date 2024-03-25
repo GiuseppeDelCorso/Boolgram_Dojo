@@ -41,16 +41,23 @@ export default {
 
 <template>
 	<main>
-		<AppHeader />
-		<SectionStories />
-		<SectionPost />
-		<SectionUser />
-		<AppComponent />
+		<AppHeader class="bgHeader" />
+		<div class="d-flex bgWhite">
+			<div class="container bgWhite">
+				<div class="row">
+					<div class="col-8">
+						<SectionStories class="bgWhite" />
+					</div>
+					<div class="col-4">
+						<SectionPost class="bgWhite" />
+					</div>
+				</div>
+				<div class="row">
 
-		<button class="btn btn-primary">
-			<font-awesome-icon icon="fa-solid fa-home" class="me-1" />
-			<span>Primary button</span>
-		</button>
+				</div>
+			</div>
+		</div>
+		<SectionUser class="bgWhite" />
 	</main>
 </template>
 
@@ -66,5 +73,11 @@ export default {
 // ...qui eventuale SCSS di App.vue
 main {
 	padding: 1rem;
+}
+.bgWhite{
+	background-color: white;
+}
+.bgHeader{
+	background-color: rgb(248, 248, 248)
 }
 </style>

@@ -1,23 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons'; // Importa icone solid
+import { far } from '@fortawesome/free-regular-svg-icons'; // Importa icone regular
+import { fab } from '@fortawesome/free-brands-svg-icons'; // Importa icone brand
+import * as bootstrap from 'bootstrap'; // Importa Bootstrap JS
 
-// importo bootstrap (js)
-import * as bootstrap from 'bootstrap'
+library.add(fas); // Aggiunge icone solid
+library.add(far); // Aggiunge icone regular
+library.add(fab); // Aggiunge icone brand
 
-/* import the fontawesome core */
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-/* import font awesome icon component */
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-/* import specific icons */
-import * as solidIcons from '@fortawesome/free-solid-svg-icons'
-import * as regularIcons from '@fortawesome/free-regular-svg-icons'
-import * as brandIcons from '@fortawesome/free-brands-svg-icons'
-
-library.add(solidIcons.fas);
-library.add(regularIcons.far);
-library.add(brandIcons.fab);
+dom.watch(); // Assicura l'aggiunta automatica degli stili
 
 window.vue = {};
 window.vue.App = createApp(App)
